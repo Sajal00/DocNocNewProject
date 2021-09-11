@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { TextInput, Text,Icon, ImageBackground, TouchableOpacity, StyleSheet, View, Dimensions, SafeAreaView, ScrollView, } from 'react-native';
-
-import icon from 'react-native-vector-icons/FontAwesome5';
-
+import { TextInput, Text,  ImageBackground, TouchableOpacity, StyleSheet, View, Dimensions, SafeAreaView, ScrollView, } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import FoundationIcon from 'react-native-vector-icons/Foundation';
 import StarRating from 'react-native-star-rating';
+// import myModal from "../Component/doctorProfileMenuBarModal"
 
 const Deviceheight = Dimensions.get('window').height;
 const Devicewidth = Dimensions.get('window').width;
@@ -13,33 +12,42 @@ const Devicewidth = Dimensions.get('window').width;
 const DoctorProfile = () => {
 
   const [starcount, setStarcount] = useState(2.5);
+  // const [menuBarPress, setmenuBarPress] = useState(false);
 
-
+  // const handelMenuBar=()=>{
+  //   setmenuBarPress(true)
+  // }
+  // const CloseHandlemenuBarPress = () => {
+  //   setmenuBarPress(false)
+  // }
   return (
 
     <SafeAreaView>
+      {/* <myModal
+          modalProps={menuBarPress}
+          CloseModalProps={CloseHandlemenuBarPress()}
+        >
+        </myModal> */}
       <ScrollView>
 
         <View style={styles.container}>
-
+        
           {/* //header */}
           <View style={styles.headercontainer}>
 
-            <TouchableOpacity>
-              <View style={{ paddingLeft: 10 }}>
-          
-              </View>
-            </TouchableOpacity>
+              <TouchableOpacity style={{ paddingLeft: 10 }}>
+              <Icon size={24} color="#309699" name="chevron-left" />
+              </TouchableOpacity>
 
             <View>
               <Text style={styles.text}>Doctor Profile</Text>
             </View>
 
-            <TouchableOpacity>
-              <View style={{ paddingRight: 10 }}>
+              <TouchableOpacity
+              //  onPress={handelMenuBar()}
+               style={{ paddingRight: 10 }}>
                 <Icon size={24} color="#309699" name="bars" />
-              </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
 
           </View>
 

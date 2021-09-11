@@ -8,6 +8,7 @@ import AuthNavigator from "../Navigation/authNavigator"
 
 const Stack = createStackNavigator();
 export default class AppNavigator extends Component {
+   
     render() {
         return (
             <Stack.Navigator screenOptions={{
@@ -16,7 +17,7 @@ export default class AppNavigator extends Component {
                   
                       <Stack.Screen name="authnavigator" component={AuthNavigator} initialRouteName="authnavigator"/>
                       
-                      {/* <Stack.Screen name="homenavigator" component={HomeNavigator}/> */}
+                      <Stack.Screen name="homenavigator" component={HomeNavigator}/>
 
 
               </Stack.Navigator>
