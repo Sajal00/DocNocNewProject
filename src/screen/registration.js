@@ -79,7 +79,6 @@ const Registration = ({ navigation }) => {
     }
     else {
       navigation.push("homenavigator")
-      // Alert.alert("all okks")
     }
   }
 
@@ -99,15 +98,11 @@ const Registration = ({ navigation }) => {
             
             <View style={styles.inputcontainer}>
 
-
               <TextInput style={styles.name}
-              
                 placeholder={"Name"}
                 placeholderTextColor={'#fff'}
                 value={name}
                 onChangeText={val => setName(val)} />
-
-
 
               <TextInput style={styles.phnno}
                 placeholder={"Phone no"}
@@ -117,9 +112,7 @@ const Registration = ({ navigation }) => {
                 value={phoneno}
                 onChangeText={val => setPhoneno(val)} />
 
-
               {/* // gender */}
-
               <SwitchSelector
                 options={genderoption}
                 initial={0}
@@ -127,18 +120,12 @@ const Registration = ({ navigation }) => {
                 selectedColor="#fff"
                 buttonColor="#1e9ea1" />
 
-
-
-
-
-
               <TextInput style={styles.mailid}
                 placeholder={"Mail ID"}
                 placeholderTextColor={'#fff'}
                 value={mailid}
                 onChangeText={val => setMailid(val)}
                  />
-
 
               {/* //age */}
               <TouchableOpacity style={styles.age} onPress={showDatePicker}>
